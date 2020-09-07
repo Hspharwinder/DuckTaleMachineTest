@@ -1,2 +1,2 @@
 # MachineTestDUckTale
-This is ,machine test rpoject
+This is machine test project
