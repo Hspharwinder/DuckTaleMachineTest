@@ -1,0 +1,82 @@
+<div class="container mt-5">
+    <u>
+        <h1 class="text-center">Create New Record</h1>
+    </u><br>
+    <form [formGroup]="formValue" (ngSubmit)="onSubmit(formValue)">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="firstName">First Name</label>
+                <input type="text" formControlName="firstName" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lastName">Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+    
+            <div class="form-group col-md-4">
+                <label for="class">Class</label>
+                <input type="text" formControlName="class" class="form-control" id="class" placeholder="class">
+            </div>
+
+            <div class="form-group col-md-12">                
+                <b>Subject</b>
+                <hr>
+            </div>
+           
+            <div formGroupName="subjectMarks">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="english">English</label>
+                        <input 
+                            type="text" 
+                            formControlName="english" 
+                            class="form-control" 
+                            id="english" 
+                            placeholder="Marks"
+                            onkeypress="return String.fromCharCode(event.charCode).match(/[0-9.]/g) != null"
+                        >
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="math">Math</label>
+                        <input 
+                            type="text" 
+                            formControlName="math" 
+                            class="form-control" 
+                            id="math" 
+                            placeholder="Marks"
+                            onkeypress="return String.fromCharCode(event.charCode).match(/[0-9.]/g) != null"
+                        >
+                    </div>
+                    
+                    <div class="form-group col-md-3">
+                        <label for="punjabi">Punjabi</label>
+                        <input 
+                            type="text" 
+                            formControlName="punjabi" 
+                            class="form-control" 
+                            id="punjabi" 
+                            placeholder="Marks"
+                            onkeypress="return String.fromCharCode(event.charCode).match(/[0-9.]/g) != null"
+                        >
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="hindi">Hindi</label>
+                        <input 
+                            type="text" 
+                            formControlName="hindi" 
+                            class="form-control" 
+                            id="hindi" 
+                            placeholder="Marks"
+                            onkeypress="return String.fromCharCode(event.charCode).match(/[0-9.]/g) != null"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a routerLink="/home" routerLinkActive="active">
+            <button type="button" class="btn btn-light float-right">Cancel</button>
+        </a>
+        <button type="submit" class="btn btn-primary float-right">Save</button>
+    </form>
+</div>
